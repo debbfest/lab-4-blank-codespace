@@ -1,10 +1,5 @@
 #!/bin/bash
 
-# Ask the user for their name
-
-read -p "What is your name? " name
-
-# Greet the user 
-
-echo "Hi there, $name"
-echo "Welcome to DevDojo!"
+echo "Argument one is $1"
+echo "Argument two is $2"
+echo "Argument three is $3"
