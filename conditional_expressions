@@ -1,18 +1,23 @@
 #!/bin/bash
 
-admin="devdojo"
+read -p "Enter the name of your car brand: " car
 
-read -p "Enter your username? " username
+case $car in
 
-# Check if the username provided is the admin
+  Tesla)
+    echo -n "${car}'s car factory is in the USA."
+    ;;
 
-if [[ "${username}" != "${admin}" ]] || [[ $EUID != 0 ]] ; then
-    echo "You are not the admin or root user, but please be safe!"
-else
-    echo "You are the admin user! This could be very destructive!"
-fi#!/bin/bash
+  BMW | Mercedes | Audi | Porsche)
+    echo -n "${car}'s car factory is in Germany."
+    ;;
 
-if (( $EUID == 0 )); then
-    echo "Please do not run as root"
-    exit
-fi
+  Toyota | Mazda | Mitsubishi | Subaru)
+    echo -n "${car}'s car factory is in Japan."
+    ;;
+
+  *)
+    echo -n "${car} is an unknown car brand"
+    ;;
+
+esac
