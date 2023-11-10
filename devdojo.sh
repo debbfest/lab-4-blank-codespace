@@ -1,4 +1,4 @@
-touch#!/bin/bash
+touchtouch #!/bin/bash
 
 echo "Argument one is $1"
 echo "Argument two is $2"
