@@ -1,0 +1,12 @@
+#!/bin/bash
+
+#letters=( "A""B""C""D""E" ) 
+#echo ${letters[@]}
+
+#letters=( "A""B""C""D""E" ) 
+#b=${letters:0:2}
+#echo "${b}"
+
+letters=( "A""B""C""D""E" ) 
+b=${letters:3}
+echo "${b}"
